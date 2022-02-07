@@ -1,0 +1,2 @@
+,build,basic,nobusywait,pool,pool2,single,light,light2,locks,locks2,locks3,locks4,equal,equal2,equal3,fewer,fewer2,fewer3,drop_head,drop_tail,drop_random,locks_hard,stats_all_count,stats_dynamic_count,stats_static_count,stats_distpatch_time
+0,1,1,1,1,1,1,1,1,0,0,0,1,0,0,1,0,0,0,1,1,1,1,1,1,0,0
