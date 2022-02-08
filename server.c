@@ -27,7 +27,7 @@ void getargs(int *port, int *nthreads, int *queue_size, char **schedalg, int arg
     *port = atoi(argv[1]);
     *nthreads = atoi(argv[2]);
     *queue_size = atoi(argv[3]);
-    *schedalg = argv[4];
+    *schedalg = argc == 5 ? argv[4] : "block";
 }
 
 void *thread_worker()

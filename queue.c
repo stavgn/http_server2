@@ -63,8 +63,12 @@ int enqueue(queue_t *q, qnode_t node)
     pthread_mutex_lock(&q->lock);
     while ((q->length + q->working_threds) >= q->queue_max_length) // queue is full
     {
-
-        if ((q->length == 0) || (!strcmp(q->schedalg, "dt")))
+        if (!strcmp(q->schedalg, "block"))
+        {
+            // printf("queue is full 'Blocking', %d request %d threads\n", q->length, q->working_threds);
+            pthread_cond_wait(&q->full, &q->lock);
+        }
+        else if ((q->length == 0) || (!strcmp(q->schedalg, "dt")))
         {
             // printf("queue is full 'Closing New Request', %d request %d threads\n", q->length, q->working_threds);
             Close(node.connfd);

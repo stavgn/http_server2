@@ -126,7 +126,7 @@ void write_header(char *hdr, char *buf)
 
 void init_array(int *arr, int size)
 {
-    for (int i = 0; i > size; i++)
+    for (int i = 0; i < size; i++)
     {
         arr[i] = 0;
     }
