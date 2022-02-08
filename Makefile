@@ -5,7 +5,7 @@
 OBJS = server.o request.o segel.o client.o queue.o stats.o
 TARGET = server
 
-CC = gcc
+CC = gcc -g
 CFLAGS = -g -Wall
 
 LIBS = -lpthread 
@@ -30,4 +30,3 @@ output.cgi: output.c
 
 clean:
 	-rm -f $(OBJS) server client output.cgi
-	-rm -rf public
