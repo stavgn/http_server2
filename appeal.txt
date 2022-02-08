@@ -1,0 +1,11 @@
+OS 234123 - HW3 Appeal
+
+Minor Modficatinos were added to the submission in the following files:
+1. server.c - We fixed a bug that resulted a failure in obtaining the "schedalg" paramter
+2. queue.c - We added an "if statement" fixing stability issue.
+3. stat.c - we fixed a typo.
+
+Total lines changed - 5 lines total (excluding curly brackets).
+
+Thanks in Advance,
+Dor & Stav
